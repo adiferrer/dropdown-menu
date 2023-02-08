@@ -1,0 +1,25 @@
+{
+  "name": "@jeanneferrer/dropdown-menu",
+  "version": "1.0.9",
+  "description": "Dynamic dropdown menu",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/adiferrer/dropdown-menu.git"
+  },
+  "keywords": [
+    "dropdown",
+    "menu",
+    "dropdown",
+    "navbar"
+  ],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/adiferrer/dropdown-menu/issues"
+  },
+  "homepage": "https://github.com/adiferrer/dropdown-menu#readme"
+}

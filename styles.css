@@ -1,0 +1,131 @@
+/* Drop Down Menu layout */
+nav {
+    overflow: hidden;
+}
+
+nav a {
+    float: left;
+    display: block;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav .icon {
+  display: none;
+}
+
+.dropdown-menu {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown-header a {
+    gap: 1em;
+    padding: 0;
+}
+
+.dropdown-header {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.dropdown-menu .dropdown-header,
+.no-subitems {
+    font-size: 1em;
+    font-family: inherit;
+    margin: 0;
+}
+
+button.dropdown-header {
+    border: none;
+    appearance: none;
+    background: none;
+    padding: 0;
+    padding: 14px 16px;
+}
+
+button.dropdown-header::after {
+    content: "";
+    float: right;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid #CCC;
+    transition: all 0.5s;
+}
+
+.dropdown-menu div {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+
+    height:0px;
+    transition: height .4s ease;
+}
+
+.dropdown-menu div a {
+    float: none;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-menu.show div {
+    display: block;
+    height: auto;
+}
+
+.dropdown-menu.show button.dropdown-header::after {
+    transition: all 0.5s;
+    transform: rotate(180deg);
+}
+
+@media screen and (max-width: 600px) {
+    nav > .no-subitems,
+    nav .dropdown-header  {
+        display: none;
+    }
+
+    nav a.icon {
+        float: right;
+        display: block;
+    }
+
+    nav.mobile-down {
+        position: relative;
+    }
+
+    nav.mobile-down a.icon {
+        position: absolute;
+        right: 0;
+        top: 0;
+    }
+
+    nav.mobile-down a {
+        float: none;
+        display: block;
+        transition: all 0.5s;
+        text-align: left;
+    }
+
+    nav.mobile-down .dropdown-menu {
+        float: none;
+    }
+
+    nav.mobile-down .dropdown-menu div {
+        position: relative;
+    }
+
+    nav.mobile-down .dropdown-menu button {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        text-align: left;
+    }
+}
